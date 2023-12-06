@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +58,9 @@ Route::prefix('/learn')->group(function(){
 Route::get('/lab', function(){
     return view('laboratory');
 });
+
+Route::get('/forums', [PostController::class, 'index']);
+Route::get('/forums/{forum:slug}', [PostController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
