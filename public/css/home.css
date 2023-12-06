@@ -1,0 +1,262 @@
+*{
+    font-family: "Apercu",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+#home-header{
+    height: 600px;
+    width: 100%;
+    background-image: url("../img/header-img.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-header h1, p{
+    text-align: center;
+    color: white;
+}
+
+#home-header h1{
+    padding-top: 180px;
+    font-size: 60px;
+}
+#home-header p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+#home-header button{
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    background-color: #3A10E5;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    transition: 0.125s ease-in-out;
+    width: 15%;
+    margin-left: 42%;
+}
+#home-header button:hover{
+   opacity: 80%;
+}
+
+#home-reason{
+  position: relative;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+#home-reason .reason-title{
+    font-weight: 700;
+    padding: 50px 20px 120px;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    background: #FFD300;
+}
+
+#home-reason .tab-header,
+#home-reason .tab-indicator,
+#home-reason .tab-body{
+    margin: 0 auto;
+    max-width: 80%;
+    width: 100%;
+}
+
+#home-reason .tab-header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-top: -60px;
+    z-index: 2;
+}
+
+#home-reason .tab-body{
+    position: relative;
+    background-color: #fff;
+    padding: 50px 0 70px 0;
+}
+
+#home-reason .tab-body > div{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    top: -100vh;
+}
+
+#home-reason .tab-body > div > *{
+    margin: 20px 0;
+}
+#home-reason .tab-body > div > p{
+    color: #555;
+    font-size: 20px;
+}
+#home-reason .tab-body > div.active{
+    top: 0;
+    opacity: 1;
+    transition: top 0ms ease-in-out 0ms, 
+    opacity 500ms ease-in-out 0ms;
+}
+#home-reason .tab-header > div{
+    width: 25%;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition:color 300ms ease-in-out;
+}
+#home-reason .tab-header > div.active{
+    color: black;
+}
+#home-reason .tab-indicator{
+    position: relative;
+    height: 60px;
+    margin-top: -60px;
+}
+#home-reason .tab-indicator > div{
+    position: absolute;
+    left: 0%;
+    width: 25%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    transition: all 300ms ease-in-out;
+}
+
+#home-testimonials{
+    padding: 5% 5% 2% 5%;
+    background-color: #E5E5E5;
+    color: black;
+    text-align: center;
+}
+
+.testimonial-text{
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.carousel-item{
+    padding: 7% 5%;
+}
+
+#promotion{
+    background-color: #3A10E5;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 100px;
+    justify-content: space-around;
+}
+
+#promotion > h1{
+    max-width: 220px;
+}
+
+.promotion-sub{
+    display: flex;
+    flex-direction: column;
+}
+.promotion-sub:nth-child(2){
+    margin-left: 150px;
+}
+.promotion-sub > h2{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.promotion-sub > p{
+    font-size: 18px;
+}
+
+#learn-card{
+    background-color: #10162F;
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+    padding: 100px;
+}
+
+#learn-card > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#learn-card > div > h1{ 
+    max-width: 800px;
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+#learn-card > div > a > button{
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    background-color: #FFD300;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    margin-right: 100px;
+    transition: 0.125s ease-in-out;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+#learn-card > div > a > button:hover{
+    opacity: 80%;
+}
+
+#learn-card > img {
+    width: 25%;
+    margin-right: 100px;
+}
+
+#forum-card{
+    background-color: #3A10E5;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 100px;
+}
+#forum-card > div > h1{
+    margin-bottom: 30px;
+}
+#forum-card > div > h2{
+    max-width: 400px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+#forum-card > div > a > button {
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    background-color: #FFD300;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    margin-right: 100px;
+    transition: 0.125s ease-in-out;
+}
+#forum-card > div > a > button:hover {
+    opacity: 80%;
+}
+
+#forum-card > img{
+    width: 25%;
+    margin-left: 200px;
+}
