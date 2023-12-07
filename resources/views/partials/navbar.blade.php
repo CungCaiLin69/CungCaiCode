@@ -7,7 +7,7 @@
             <a class="navbar-link" href="/learn"><li>Learn</li></a>
             <a class="navbar-link" href="/courses"><li>Courses</li></a>
             <a class="navbar-link" href="/lab"><li>Laboratory</li></a>
-            <a class="navbar-link" href="/forum">Forum</li></a>
+            <a class="navbar-link" href="/forums">Forum</li></a>
         </ul>
     </div>
 

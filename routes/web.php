@@ -60,14 +60,23 @@ Route::get('/lab', function(){
 });
 
 Route::get('/forums', [PostController::class, 'index']);
-Route::get('/forums/{forum:slug}', [PostController::class, 'show']);
+Route::get('/forums/{post:slug}', [PostController::class, 'show']);
+Route::middleware(['auth'])->group(function(){
+    Route::post('/forums', [PostController::class, 'store'])->middleware('auth');
+    Route::post('/forums/{post:slug}', [PostController::class, 'update'])->middleware('auth');
+    Route::post('forums/{post:slug}', [PostController::class, 'destroy'])->middleware('auth');
+    Route::post('/forums/{post:slug}', [PostReplyController::class, 'store'])->middleware('auth');
+    Route::post('/forums/{post:slug}', [PostReplyController::class, 'destroy'])->middleware('auth');
+    
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/register', [RegisterController::class, 'store'])->middleware("auth");
+
 
 Route::get('/dashboard', function(){
     return view('dashboard.index');
