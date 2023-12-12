@@ -1,0 +1,45 @@
+#sidebar {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E5E5E5;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 1px solid black;
+}
+  
+#sidebar > div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+#sidebar > div > img{
+    width: 15%;
+    margin-left: 25px;
+}
+#sidebar > div > p{
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 2;
+}
+
+#sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+  
+#sidebar a:hover {
+    color: #3A10E5;
+}
+
+#sidebar a:active {
+    background-color: #3A10E5;
+    color: white;
+}

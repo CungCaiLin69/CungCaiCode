@@ -1,0 +1,32 @@
+#py-page{
+    padding: 2% 5% 5% 25%;
+    scroll-behavior: smooth;
+}
+
+code {
+    font-family: Consolas,"courier new";
+    color: white;
+    background-color: black;
+    padding: 2px;
+    font-size: 105%;
+}
+
+.next-btn{
+    padding: 5px;
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    background-color: #FFD300;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    margin: 100px 0 10px 400px;
+    transition: 0.125s ease-in-out;
+    text-decoration: none;
+}
+.next-btn:hover{
+    opacity: 80%;
+}
+
+#stringFormatting{
+    margin-bottom: 100px;
+}

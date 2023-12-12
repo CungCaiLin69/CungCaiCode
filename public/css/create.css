@@ -1,0 +1,32 @@
+.create-btn{
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    background-color: #3A10E5;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    transition: 0.125s ease-in-out;
+}
+.create-btn:hover{
+    opacity: 80%;
+}
+
+.back-btn{
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    background-color: #FFD300;
+    border: none;
+    padding: 7px 25px 10px 25px;
+    margin-right: 100px;
+    transition: 0.125s ease-in-out;
+    text-decoration: none;
+}
+.back-btn:hover{
+    opacity: 80%;
+    color: black;
+}

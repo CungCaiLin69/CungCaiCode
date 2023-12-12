@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="footer-content">
         <div class="logo-n-copy">
-            <img class="logo-footer" src="img/logo.png" alt="">
+            <img class="logo-footer" src="/img/logo.png" alt="">
             <h6 class="copyright">&copy; CungCaiCode 2023</h6>
         </div>
 
