@@ -48,14 +48,14 @@
     <div class="editor" id="editor"></div>
 
     <div class="button-container">
-        <button class="btn btn-primary" onclick="executeCode()"> Run </button>
+        <button class="btn btn-primary" onclick="runCode()"> Run </button>
     </div>
 
     <div class="output"></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/lablib/ace.js"></script>
     <script src="js/lablib/theme-monokai.js"></script>
-    <script src="js/codelab.js"></script>
+    <script src="js/codelabs.js"></script>
 </body>
 </html>

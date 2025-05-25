@@ -10,17 +10,17 @@ function changeLanguage() {
 
     let language = $("#languages").val();
 
-    if(language == 'c' || language == 'cpp')editor.session.setMode("/ace/mode/c_cpp");
-    else if(language == 'php')editor.session.setMode("/ace/mode/php");
-    else if(language == 'python')editor.session.setMode("/ace/mode/python");
-    else if(language == 'node')editor.session.setMode("/ace/mode/javascript");
+    if(language == 'c' || language == 'cpp')editor.session.setMode("ace/mode/c_cpp");
+    else if(language == 'php')editor.session.setMode("ace/mode/php");
+    else if(language == 'python')editor.session.setMode("ace/mode/python");
+    else if(language == 'node')editor.session.setMode("ace/mode/javascript");
 }
 
-function executeCode() {
+function runCode() {
 
     $.ajax({
 
-        url: "/app/php/compiler.php",
+        url: "/compiler/compiler.php",
 
         method: "POST",
 

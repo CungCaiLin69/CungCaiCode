@@ -1,60 +1,340 @@
-*{
-    font-family: "Apercu",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+:root {
+  --codecademy-purple: #3a10e5;
+  --codecademy-dark-purple: #2d0bb8;
+  --codecademy-light-purple: #f0ebff;
+  --codecademy-blue: #1f4b99;
+  --codecademy-green: #00c896;
+  --codecademy-orange: #ffb100;
+  --codecademy-red: #ff6b35;
+  --codecademy-dark: #10162f;
+  --codecademy-gray: #64748b;
+  --codecademy-light-gray: #f8fafc;
+  --codecademy-white: #ffffff;
+  --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-#course-section > h1{
-    text-align: center;
-    margin: 50px;
-    font-size: 45px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.course-group{
-    display: flex;
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--codecademy-light-purple) 0%,
+    var(--codecademy-white) 100%
+  );
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--codecademy-dark);
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--codecademy-purple),
+    var(--codecademy-blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--codecademy-gray);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* Course Grid */
+.course-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Course Cards */
+.course-card {
+  background: var(--codecademy-white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(58, 16, 229, 0.08);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--codecademy-purple),
+    var(--codecademy-blue)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+  border-color: var(--codecademy-purple);
+}
+
+.course-card:hover::before {
+  opacity: 1;
+}
+
+.course-card:focus-within {
+  outline: 2px solid var(--codecademy-purple);
+  outline-offset: 2px;
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.course-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--codecademy-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.course-description {
+  color: var(--codecademy-gray);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--codecademy-gray);
+}
+
+.course-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.course-button {
+  background: linear-gradient(
+    135deg,
+    var(--codecademy-purple),
+    var(--codecademy-dark-purple)
+  );
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.course-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  background: linear-gradient(
+    135deg,
+    var(--codecademy-dark-purple),
+    var(--codecademy-purple)
+  );
+  color: white;
+}
+
+.course-button:focus {
+  outline: 2px solid var(--codecademy-purple);
+  outline-offset: 2px;
+}
+
+.course-button:active {
+  transform: translateY(0);
+}
+
+/* Progress indicators */
+.progress-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--codecademy-light-purple);
+  color: var(--codecademy-purple);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Accessibility and responsive design */
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .course-container {
+    padding: 0 1rem 2rem;
+  }
+
+  .course-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-header {
     flex-direction: column;
-    justify-content: space-evenly;
+    text-align: center;
     align-items: center;
+  }
+
+  .course-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
 
-.single-course{
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    border: 1px solid black;
-    transition: 0.125s;
-    margin-bottom: 100px;
-}
-.single-course:hover{
-    transform: translate(-5px, -10px);
-    box-shadow: 10px 10px;
-}
-.single-course:nth-child(2){
-    height: 200px;
+/* Color schemes for different courses */
+.frontend .course-icon {
+  background: linear-gradient(135deg, var(--codecademy-orange), #ffd700);
+  color: white;
 }
 
-.single-course > img{
-    width: 25%;
-    padding: 20px;
+.backend .course-icon {
+  background: linear-gradient(135deg, var(--codecademy-green), #00e6b8);
+  color: white;
 }
 
-.single-course > div{
-    margin-left: 50px;
+.fullstack .course-icon {
+  background: linear-gradient(
+    135deg,
+    var(--codecademy-purple),
+    var(--codecademy-blue)
+  );
+  color: white;
 }
-.single-course > div > h1{
-    font-size: 30px;
-    margin-top: 45px;
+
+.android .course-icon {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
 }
-.single-course > div > .btn{
-    border-radius: 4px;
-    padding: 5px;
-    font-weight: 700;
-    color: white;
-    font-size: 1rem;
-    background-color: #3A10E5;
-    border: none;
-    padding: 7px 25px 10px 25px;
-    margin-top: 25px;
-    transition: 0.125s ease-in-out;
+
+.ios .course-icon {
+  background: linear-gradient(135deg, var(--codecademy-gray), #9ca3af);
+  color: white;
 }
-.single-course > div > .btn:hover{
-    opacity: 80%;
+
+.dataeng .course-icon {
+  background: linear-gradient(135deg, var(--codecademy-red), #ff8a65);
+  color: white;
+}
+
+.uiux .course-icon {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+}
+
+/* Loading states and micro-interactions */
+.course-card.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--codecademy-purple);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }

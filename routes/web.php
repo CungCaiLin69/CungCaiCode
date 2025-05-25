@@ -122,8 +122,3 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 
 Route::resource("/forum/reply", PostReplyController::class)->middleware('auth');
-
-Route::get('/dashboard', function(){
-    return view('dashboard.index');
-})->middleware('auth');
-

@@ -62,7 +62,7 @@
           <form action="/forum/reply" method="post" class="mb-5">
             @csrf
             <label for="body" class="form-label">Add a reply</label>
-            <input type="text" class="form-control mb-3" id="body" name="body" style="height: 250px; border: 1px solid black;" required>
+            <input type="text" class="form-control mb-3" id="body" name="body" style="padding: 10px; border: 1px solid black;" required>
             <input type="hidden" name="post_id" id="post_id" value="{{ $post->id }}">
             <button type="submit" class="btn btn-primary">Post</button>
           </form>
