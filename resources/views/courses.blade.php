@@ -254,12 +254,9 @@
     </script>
 
     <script>
-        // Enhance accessibility and user experience
         document.addEventListener('DOMContentLoaded', function() {
-            // Add progressive enhancement for animations
             const cards = document.querySelectorAll('.course-card');
-            
-            // Intersection Observer for progressive loading
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -270,8 +267,7 @@
             }, { threshold: 0.1 });
             
             cards.forEach(card => observer.observe(card));
-            
-            // Keyboard navigation enhancement
+
             cards.forEach(card => {
                 card.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -281,15 +277,13 @@
                     }
                 });
             });
-            
-            // Add loading state simulation
+
             const buttons = document.querySelectorAll('.course-button');
             buttons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     const card = this.closest('.course-card');
                     card.classList.add('loading');
                     
-                    // Remove loading state after navigation would typically occur
                     setTimeout(() => {
                         card.classList.remove('loading');
                     }, 2000);

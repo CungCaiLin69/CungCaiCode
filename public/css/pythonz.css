@@ -5,7 +5,6 @@
 }
 
 :root {
-  /* Codecademy Color Palette */
   --primary-purple: #3a10e5;
   --secondary-purple: #5b2c87;
   --dark-navy: #10162f;
@@ -38,7 +37,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Main Content */
 #py-page {
   margin-left: 300px;
   padding: 40px 60px;
@@ -46,25 +44,6 @@ body {
   min-height: 100vh;
 }
 
-/* Progress Bar */
-.progress-container {
-  position: fixed;
-  top: 0;
-  left: 300px;
-  right: 0;
-  height: 4px;
-  background: var(--surface-dark);
-  z-index: 999;
-}
-
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink));
-  width: 0%;
-  transition: width 0.3s ease;
-}
-
-/* Typography */
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -106,7 +85,6 @@ p {
   font-size: 1rem;
 }
 
-/* Lists */
 ul {
   margin: 16px 0;
   padding-left: 0;
@@ -128,7 +106,6 @@ li::before {
   font-size: 12px;
 }
 
-/* Code Blocks */
 code {
   font-family: "Fira Code", "Monaco", "Menlo", monospace;
   background: var(--code-bg);
@@ -185,7 +162,6 @@ code {
   color: var(--accent-yellow);
 }
 
-/* Interactive Elements */
 .try-it-btn {
   background: linear-gradient(
     135deg,
@@ -227,7 +203,6 @@ code {
   color: var(--text-primary);
 }
 
-/* Sections */
 section {
   margin-bottom: 60px;
   padding: 32px;
@@ -248,7 +223,6 @@ section::before {
   background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink));
 }
 
-/* Navigation */
 .section-nav {
   display: flex;
   justify-content: space-between;
@@ -279,7 +253,6 @@ section::before {
   margin: 0 8px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   #sidebar {
     transform: translateX(-100%);
@@ -326,7 +299,6 @@ section::before {
   }
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -342,7 +314,6 @@ section {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Success/Error States */
 .success-message {
   background: rgba(16, 185, 129, 0.1);
   border: 1px solid var(--success-green);
@@ -361,7 +332,6 @@ section {
   margin: 16px 0;
 }
 
-/* Tooltips */
 .tooltip {
   position: relative;
   cursor: help;

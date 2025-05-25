@@ -157,7 +157,7 @@
             <!-- GoLang Card -->
             <a href="/learn/golang" class="tech-card" data-category="backend" data-difficulty="advanced">
                 <div class="card-icon">
-                    <i class="fas fa-code"></i>
+                    <i class="fab fa-golang"></i>
                 </div>
                 <h3 class="card-title">Go</h3>
                 <p class="card-description">Build scalable, high-performance applications with Google's modern language.</p>
@@ -189,7 +189,7 @@
             <!-- C Card -->
             <a href="/learn/c" class="tech-card" data-category="backend" data-difficulty="advanced">
                 <div class="card-icon">
-                    <i class="fas fa-code"></i>
+                    <i class="fab fa-c"></i>
                 </div>
                 <h3 class="card-title">C</h3>
                 <p class="card-description">Learn the fundamentals of programming with this foundational language.</p>
@@ -266,7 +266,6 @@
     @include('partials.footer')
 
     <script>
-        // Search and Filter functionality
         const searchInput = document.getElementById('searchInput');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const cards = document.querySelectorAll('.tech-card');
@@ -277,16 +276,13 @@
         let currentFilter = 'all';
         let currentSearch = '';
 
-        // Search functionality
         searchInput.addEventListener('input', (e) => {
             currentSearch = e.target.value.toLowerCase();
             filterCards();
         });
 
-        // Filter functionality
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active state
                 filterButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
@@ -295,7 +291,6 @@
             });
         });
 
-        // Filter cards based on search and category
         function filterCards() {
             let visibleCards = 0;
             
@@ -316,7 +311,6 @@
                 }
             });
 
-            // Show/hide no results message
             if (visibleCards === 0) {
                 noResults.style.display = 'block';
                 cardsGrid.style.opacity = '0.3';
@@ -326,31 +320,24 @@
             }
         }
 
-        // Click feedback for cards
         cards.forEach(card => {
             card.addEventListener('click', (e) => {
-                // Show success message
                 successMessage.classList.add('show');
                 
-                // Hide after 3 seconds
                 setTimeout(() => {
                     successMessage.classList.remove('show');
                 }, 3000);
-                
-                // Add loading state
+
                 card.classList.add('loading');
                 
-                // Prevent immediate navigation for demo (remove in production)
                 e.preventDefault();
-                
-                // Navigate after brief delay (remove in production)
+
                 setTimeout(() => {
                     window.location.href = card.href;
                 }, 1000);
             });
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '/') {
                 e.preventDefault();
@@ -365,9 +352,7 @@
             }
         });
 
-        // Progressive enhancement
         document.addEventListener('DOMContentLoaded', () => {
-            // Add focus indicators for keyboard navigation
             cards.forEach((card, index) => {
                 card.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {

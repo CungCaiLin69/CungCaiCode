@@ -13,7 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Hero Section */
 .hero-section {
   text-align: center;
   padding: 80px 20px 60px;
@@ -40,7 +39,6 @@ body {
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-/* Search and Filter */
 .controls-section {
   padding: 40px 20px;
   max-width: 1200px;
@@ -109,7 +107,6 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Cards Grid */
 .cards-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -215,7 +212,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: 1fr;
@@ -236,7 +232,6 @@ body {
   }
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -257,7 +252,6 @@ body {
   }
 }
 
-/* Loading States */
 .loading {
   opacity: 0.6;
   pointer-events: none;
@@ -275,7 +269,6 @@ body {
   opacity: 0.5;
 }
 
-/* Accessibility */
 .tech-card:focus {
   outline: 3px solid #3a10e5;
   outline-offset: 2px;
@@ -291,7 +284,6 @@ body {
   outline-offset: 2px;
 }
 
-/* Success feedback */
 .success-message {
   position: fixed;
   top: 20px;
